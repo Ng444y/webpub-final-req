@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Ad Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f8fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .twitter-ad {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 16px;
+            border: 1px solid #e1e8ed;
+            padding: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header .left {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-pic {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .username {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .handle {
+            color: gray;
+            font-size: 14px;
+        }
+
+        .content {
+            margin-top: 8px;
+            font-size: 15px;
+        }
+
+        .ad-image {
+            width: 100%;
+            border-radius: 16px;
+            margin-top: 8px;
+        }
+
+        .ad-image img {
+            width: 100%;
+            border-radius: 16px;
+        }
+
+        .video-timer {
+            position: relative;
+            bottom: 35px;
+            right: 10px;
+            background-color: black;
+            color: white;
+            padding: 2px 5px;
+            font-size: 12px;
+            border-radius: 4px;
+            opacity: 0.8;
+            float: right;
+            margin-right: 10px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .promoted {
+            font-size: 12px;
+            color: gray;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-around;
+            width: 150px;
+        }
+
+        .actions button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            color: gray;
+            cursor: pointer;
+        }
+
+        .actions button:hover {
+            color: black;
+        }
+
+        .actions .like-count {
+            font-size: 14px;
+            margin-left: 2px;
+            color: gray;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="twitter-ad">
+        <div class="header">
+            <div class="left">
+                <img src="../../img-vid/logo/logo.png" alt="Profile Picture" class="profile-pic">
+                <div>
+                    <span class="username">HubsPot Coffee</span><br>
+                    <span class="handle">@hubspotcoffee</span>
+                </div>
+            </div>
+            <div class="right">...</div>
+        </div>
+
+        <div class="content">
+            Love coffee? We’ve partnered with local coffee bean roasters to bring you the best flavors in San Francisco.
+        </div>
+
+        <div class="ad-image">
+            <img src="../../img-vid/hub2.jpg" alt="Coffee Image">
+            <div class="video-timer">0:29</div>
+        </div>
+
+        <div class="footer">
+            <span class="promoted">Promoted</span>
+            <div class="actions">
+                <button>💬</button>
+                <button>🔁</button>
+                <button>❤️</button><span class="like-count">3</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
