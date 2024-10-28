@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer List</title>
+  <link rel="stylesheet" href="customer.css">
+  <link rel="stylesheet" href="css/feature.css">
+  <link rel="icon" type="image/x-icon" href="/img-vid/logo/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <div class="navigation">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="feature.html">Feature</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html"><img src="/img-vid/cart.png" alt="Shopping Cart"></a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Line -->
+  <div class="container">
+    <h1 class="liner"><a href="index.html">HUBSPOT COFFEE</a></h1>
+  </div>
+  
+  <header>
+    <h1>Customer List</h1>
+    <input type="text" id="search" placeholder="Search customers by name...">
+  </header>
+
+  <section id="customer-list-container">
+    <ul id="customer-list">
+      <!-- Customer data will load here from the API -->
+    </ul>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const customerList = document.getElementById('customer-list');
+      const searchInput = document.getElementById('search');
+
+      // Function to display customers and their messages
+      function displayCustomers(customers) {
+        customerList.innerHTML = ''; // Clear current list
+        customers.forEach(customer => {
+          const listItem = document.createElement('li');
+          listItem.textContent = `Name: ${customer.name}, Email: ${customer.email}, Contact: ${customer.contact}, Message: ${customer.message}, Date Sent: ${customer.dateSent}`;
+          customerList.appendChild(listItem);
+        });
+      }
+
+      // Fetch all customers and messages on load
+      fetch('/api/contact-messages')
+        .then(response => response.json())
+        .then(messages => {
+          displayCustomers(messages); // Display fetched messages
+        });
+
+      // Search functionality
+      searchInput.addEventListener('input', (event) => {
+        const query = event.target.value.toLowerCase();
+        fetch('/api/contact-messages')
+          .then(response => response.json())
+          .then(data => {
+            const filteredCustomers = data.filter(customer =>
+              customer.name.toLowerCase().includes(query)
+            );
+            displayCustomers(filteredCustomers);
+          });
+      });
+    });
+  </script>
+</body>
+</html>

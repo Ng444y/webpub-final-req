@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Ad Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .fb-ad {
+            width: 400px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 16px;
+            margin-top: 20px;
+        }
+
+        .ad-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .ad-info {
+            flex-grow: 1;
+        }
+
+        .ad-title {
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .ad-sponsored {
+            font-size: 12px;
+            color: gray;
+        }
+
+        .globe-icon {
+            width: 12px;
+            height: 12px;
+        }
+
+        .ad-options {
+            font-size: 18px;
+            color: gray;
+            cursor: pointer;
+        }
+
+        .ad-content {
+            text-align: left;
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        .ad-content strong {
+            font-weight: bold;
+        }
+
+        .ad-image {
+            width: 100%;
+            height: 180px;
+            background-image: url("../../img-vid/featurepage/img5.jpg");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .ad-image img {
+            width: 120px;
+        }
+
+        .ad-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ad-footer .action-button {
+            font-size: 14px;
+            color: #1877f2;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .ad-footer .action-button:hover {
+            text-decoration: underline;
+        }
+
+        .ad-footer .social-buttons {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+        }
+
+        .social-buttons button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: gray;
+            font-size: 16px;
+        }
+
+        .social-buttons button:hover {
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="fb-ad">
+        <div class="ad-header">
+            <img src="../../img-vid/logo/logo.png" alt=" Logo" class="logo">
+            <div class="ad-info">
+                <span class="ad-title">HubSpot Coffee</span>
+            </div>
+            <div class="ad-options">&#x22EE;</div>
+        </div>
+
+        <div class="ad-content">
+            Here's a 30% Off Reward. You are officially a HUBSsie. High five! We're so excited to have you on board!<br><br>
+            <strong>You Nailed it On Your First Sip!</strong>
+        </div>
+
+        <div class="ad-image">
+            <img src="img/hub.jpg" alt="MKGO Logo">
+        </div>
+
+        <div class="ad-footer">
+            <button class="action-button">Learn More</button>
+            <div class="social-buttons">
+                <button>👍 Like</button>
+                <button>💬 Comment</button>
+                <button>↪️ Share</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
