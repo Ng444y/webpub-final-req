@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Bebas Neue", sans-serif;
+    background-color: #F9F9F9;
+    padding: 0;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+nav {
+    width: 100%;
+    padding: 20px;
+    background-color: #F9F9F9; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 80px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a img {
+    vertical-align: middle; 
+    height: 25px;
+    margin-right: 5px; 
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+html {
+    overflow-y: scroll; 
+}
+
+/* Line Design */
+.liner {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -40px;
+}
+
+.liner:after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background: #000000;
+    min-width: 20px;
+    margin: auto;
+    margin-left: 20px;
+}
+
+.liner, h1 {
+    font-size: 60px;
+}
+
+.liner, a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.center-container {
+    display: flex;
+    justify-content: space-between; /* Space between form and map */
+    padding: 20px;
+    margin-left: 100px;
+}
+
+.form-container {
+    flex: 1; /* Takes up 1 part of the space */
+    max-width: 500px; /* Limit max width */
+    margin-right: 300px; /* Space between form and map */
+    margin: 100px;
+}
+
+.map-container {
+    flex: 1; /* Takes up 1 part of the space */
+}
+
+iframe {
+    width: 100%; /* Full width */
+    height: 450px; /* Height of the map */
+    border: 0; /* No border */
+}
+
+.map-container iframe {
+    width: 800px; 
+    height: 800px; /* Change this value for the desired height */
+    border: 0; 
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input, textarea, select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#social-media-options {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+#social-media-options label {
+    font-weight: normal;
+    margin-left: 5px;
+}
