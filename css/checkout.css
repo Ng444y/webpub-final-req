@@ -1,0 +1,154 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Bebas Neue", sans-serif;
+    background-color: #F9F9F9;
+    padding: 0;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+nav {
+    width: 100%;
+    padding: 20px;
+    background-color: #F9F9F9; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 80px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a img {
+    vertical-align: middle; 
+    height: 25px;
+    margin-right: 5px; 
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+html {
+    overflow-y: scroll; 
+}
+
+
+/* Line Design */
+.liner {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -40px;
+  
+    &:after {
+      content: '';
+      flex-grow: 1;
+      height: 1px;
+      background: #000000;
+      min-width: 20px;
+      margin: auto;
+    }
+  
+    &:after {
+      margin-left: 20px;
+    }
+}
+
+.liner, h1{
+    font-size: 60px;
+}
+
+.liner, a{
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Checkout Form Styling */
+.checkout-container {
+    margin: 50px auto;
+    max-width: 600px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-container h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+}
+
+#checkout-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#checkout-form label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#checkout-form input[type="text"], 
+#checkout-form input[type="email"], 
+#checkout-form input[type="tel"], 
+#checkout-form select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    width: 100%;
+}
+
+#checkout-form input[type="text"]:focus, 
+#checkout-form input[type="email"]:focus, 
+#checkout-form input[type="tel"]:focus, 
+#checkout-form select:focus {
+    outline: none;
+    border-color: #333;
+}
+
+#checkout-form select {
+    padding: 10px;
+}
+
+#submit-btn {
+    padding: 15px;
+    background-color: #000;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+#submit-btn:hover {
+    background-color: #444;
+}

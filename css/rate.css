@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Bebas Neue", sans-serif;
+    background-color: #F9F9F9;
+    padding: 0;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+nav {
+    width: 100%;
+    padding: 20px;
+    background-color: #F9F9F9; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 80px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a img {
+    vertical-align: middle; 
+    height: 25px;
+    margin-right: 5px; 
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+html {
+    overflow-y: scroll; 
+}
+
+
+/* Line Design */
+.liner {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -40px;
+  
+    &:after {
+      content: '';
+      flex-grow: 1;
+      height: 1px;
+      background: #000000;
+      min-width: 20px;
+      margin: auto;
+    }
+  
+    &:after {
+      margin-left: 20px;
+    }
+}
+
+.liner, h1{
+    font-size: 60px;
+}
+
+.liner, a{
+    text-decoration: none;
+    color: #000000;
+}
+.rating-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.emoji-rating {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.emoji {
+    font-size: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.emoji:hover {
+    transform: scale(1.2);
+}
+
+.emoji.active {
+    transform: scale(1.5);
+}
+
+.rating-result {
+    font-family: "Poppins", sans-serif;
+    margin-top: 20px;
+    font-size: 18px;
+}
+#confirm-rating {
+    background-color: #000; 
+    color: white; 
+    border: none; 
+    border-radius: 25px; 
+    padding: 10px 20px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+#confirm-rating:hover {
+    background-color: #333; 
+    transform: scale(1.05); 
+}
+
+#confirm-rating:active {
+    transform: scale(0.95); 
+}
