@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rate</title>
+        <link rel="stylesheet" href="css/rate.css">
+        <link rel="icon" type="image/x-icon" href="img-vid/logo/logo.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="feature.html">Feature</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html"><img src="img-vid/cart.png" alt="Shopping Cart"></a></li>
+                </ul>
+            </nav>
+            
+        </div>
+        
+        <!-- Line -->
+        <div class="container">
+            <h1 class="liner"><a href="index.html">HUBSPOT COFFEE</a></h1>
+        </div>
+
+        <!-- Rate -->
+        <div class="rating-container">
+            <h2>Rate Our Service</h2>
+            <div class="emoji-rating">
+                <span class="emoji" data-rating="1">&#128545;</span>
+                <span class="emoji" data-rating="2">&#128577;</span>
+                <span class="emoji" data-rating="3">&#128528;</span>
+                <span class="emoji" data-rating="4">&#128522;</span>
+                <span class="emoji" data-rating="5">&#128525;</span>
+            </div>
+            <p class="rating-result">You rated: <span id="rating-value">0</span> / 5</p>
+            <button id="confirm-rating">Confirm</button>
+        </div>
+
+        <!-- Script -->
+        <script>
+            document.querySelectorAll('.emoji').forEach((emoji) => {
+                emoji.addEventListener('click', function () {
+                    document.querySelectorAll('.emoji').forEach(e => e.classList.remove('active'));
+                    this.classList.add('active');
+                    const ratingValue = this.getAttribute('data-rating');
+                    document.getElementById('rating-value').textContent = ratingValue;
+                });
+            });
+
+            document.getElementById('confirm-rating').addEventListener('click', function () {
+                const rating = document.getElementById('rating-value').textContent;
+                if (rating > 0) {
+                    alert(`Thank you for responding! You rated us ${rating} out of 5.`);
+                    window.location.href = 'index.html'; 
+                } else {
+                    alert('Please select a rating before confirming.');
+                }
+            });
+        </script>
+       
+    </body>
+</html>
